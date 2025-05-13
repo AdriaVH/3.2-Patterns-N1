@@ -5,4 +5,8 @@ public interface Builder {
     Builder dough(String dough);
     Builder toppings(String toppings);
     Pizza build();
+    String getSize();
+    String getDough();
+    String getToppings();
+
 }

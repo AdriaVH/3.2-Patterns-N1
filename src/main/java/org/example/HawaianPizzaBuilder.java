@@ -13,21 +13,36 @@ public class HawaianPizzaBuilder implements Builder {
     }
 
     @Override
-    public HawaianPizzaBuilder size(String size) {
+    public Builder size(String size) {
         this.size = size;
         return this;
     }
 
     @Override
-    public HawaianPizzaBuilder dough(String dough) {
+    public Builder dough(String dough) {
         this.dough = dough;
         return this;
     }
 
     @Override
-    public HawaianPizzaBuilder toppings(String toppings) {
-        this.toppings += " " + toppings;
+    public Builder toppings(String toppings) {
+        this.toppings += ", " + toppings;
         return this;
+    }
+
+    @Override
+    public String getSize() {
+        return size;
+    }
+
+    @Override
+    public String getDough() {
+        return dough;
+    }
+
+    @Override
+    public String getToppings() {
+        return toppings;
     }
 }
 

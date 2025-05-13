@@ -13,21 +13,33 @@ public class PizzaBuilder implements Builder {
     }
 
     @Override
-    public PizzaBuilder size(String size) {
-        this.size = size;
+    public Builder size(String size) {
+        this.size += size;
         return this;
     }
 
     @Override
-    public PizzaBuilder dough(String dough) {
-        this.dough = dough;
+    public Builder dough(String dough) {
+        this.dough += dough;
         return this;
     }
 
     @Override
-    public PizzaBuilder toppings(String toppings) {
+    public Builder toppings(String toppings) {
         this.toppings = toppings;
         return this;
+    }
+
+    public String getSize() {
+        return size;
+    }
+
+    public String getDough() {
+        return dough;
+    }
+
+    public String getToppings() {
+        return toppings;
     }
 }
 
