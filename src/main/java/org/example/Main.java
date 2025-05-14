@@ -9,11 +9,15 @@ public class Main {
 
         HawaianPizzaBuilder hawaianBuilder = new HawaianPizzaBuilder();
 
-        Pizza hawaianPizza = hawaianBuilder.size("24").dough("thick").toppings("Pesto").build();
+        Pizza hawaianPizzaPlusPesto = hawaianBuilder.size("24").toppings("Pesto").build();
         PizzaMaster luigi = new PizzaMaster();
-        Pizza adriaPizza = luigi.upgradeDoughCheeseCrust(hawaianBuilder);
-        System.out.println(hawaianPizza);
+        luigi.upgradeDoughCheeseCrust(hawaianBuilder);
+        Pizza hawaianPizzaExtraCrust = hawaianBuilder.build();
+
         System.out.println(fina);
+        System.out.println(hawaianPizzaPlusPesto);
+        System.out.println(hawaianPizzaExtraCrust);
+
 
     }
 }

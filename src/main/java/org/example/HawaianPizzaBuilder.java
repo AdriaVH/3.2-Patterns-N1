@@ -2,7 +2,7 @@ package org.example;
 
 public class HawaianPizzaBuilder implements Builder {
     private String size;
-    private String dough;
+    private String dough = "hawaianDough";
     private String toppings = "Ham, Pineapple, Mozzarella";
 
     public Pizza build() {
@@ -20,7 +20,7 @@ public class HawaianPizzaBuilder implements Builder {
 
     @Override
     public Builder dough(String dough) {
-        this.dough = dough;
+        this.dough += dough;
         return this;
     }
 

@@ -1,9 +1,9 @@
 package org.example;
 
 public class PizzaBuilder implements Builder {
-    private String size;
-    private String dough;
-    private String toppings;
+    private String size = "";
+    private String dough = "";
+    private String toppings = "";
 
     public Pizza build() {
         return new Pizza(this);
